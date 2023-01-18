@@ -1,0 +1,57 @@
+<!-- <hello name="{{ name }}"></hello> -->
+<div class="container">
+  <div class="answered">
+    <div>
+      <span *ngIf="thinNumber">
+        {{ thinNumber ? thinNumber : '' }}
+      </span>
+    </div>
+    <h2>
+      {{ currentNumber ? (+currentNumber | number) : '0' }}
+    </h2>
+  </div>
+  <div class="btn-group">
+    <button (click)="onReset()">c</button>
+    <button (click)="onReset()">ce</button>
+    <button (click)="onDel()">
+      <i class="fas fa-delete-left"></i>
+    </button>
+    <!-- ====== / ====== -->
+    <button (click)="onCalculate('/')">
+      <i class="fas fa-divide"></i>
+    </button>
+
+    <button (click)="onInput('7')">7</button>
+    <button (click)="onInput('8')">8</button>
+    <button (click)="onInput('9')">9</button>
+    <!-- ====== X ====== -->
+    <button (click)="onCalculate('x')">
+      <i class="fas fa-xmark"></i>
+    </button>
+
+    <button (click)="onInput('4')">4</button>
+    <button (click)="onInput('5')">5</button>
+    <button (click)="onInput('6')">6</button>
+    <!-- ====== - ====== -->
+    <button (click)="onCalculate('-')">
+      <i class="fas fa-minus"></i>
+    </button>
+
+    <button (click)="onInput('1')">1</button>
+    <button (click)="onInput('2')">2</button>
+    <button (click)="onInput('3')">3</button>
+    <!-- ====== + ====== -->
+    <button (click)="onCalculate('+')">
+      <i class="fas fa-plus"></i>
+    </button>
+
+    <button (click)="onTag()">
+      <i class="fas fa-plus-minus"></i>
+    </button>
+    <button (click)="onInput('0')">0</button>
+    <button>.</button>
+    <button (click)="onSubmit()" class="btn-submit">
+      <i class="fas fa-equals"></i>
+    </button>
+  </div>
+</div>
